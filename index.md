@@ -16,6 +16,7 @@ read my blog! check my projects! find me on other places!
 
 ## info
 
-this website is still very under construction, and likely will stay that way forever
+this website is still very under construction, and likely will stay that way forever  
+(while this website works on mobile it wont be easy to read, my bad ig)
 
 ---

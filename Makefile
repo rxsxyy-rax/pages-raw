@@ -2,7 +2,7 @@ PAGEN = pagen
 OUT = ../pages
 ASSETS = assets
 
-DATE := $(shell date +"%d%m%Y")
+DATE := $(shell date +%s)
 POSTDIR = blog/$(DATE)
 
 POSTTEMPLATE = "template.ignore"
@@ -20,9 +20,6 @@ all:
 	@echo "compiled pages to $(OUT)"
 
 post:
-	@test ! -e $(POSTDIR) || {
-		echo "$(POSTDIR) already exists" >&2; exit 1;
-	}
 	mkdir -p $(POSTDIR);
 	cp $(POSTTEMPLATE) $(POSTDIR)/index.md
 	@echo "created $(POSTDIR)/index.md"
