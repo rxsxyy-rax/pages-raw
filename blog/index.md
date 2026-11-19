@@ -6,7 +6,7 @@
 
 # current post
 
-[untitled (05/11)](2026-11-05-untitled)
+nothing here yet...
 
 ## blog archive
 

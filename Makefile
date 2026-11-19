@@ -2,11 +2,12 @@ PAGEN = pagen
 OUT = ../pages
 ASSETS = assets
 
-DATE := $(shell date +%s)
-POSTDIR = blog/$(DATE)
+TITLE ?= untitled
+SLUG := $(shell printf '%s' '$(TITLE)' | tr 'A-Z ' 'a-z-' | tr -cd 'a-z0-9-')
+POSTDIR = blog/$(shell date +%Y-%m-%d)-$(SLUG)
 
-POSTTEMPLATE = "template.ignore"
-FOOTTEMPLATE = "footer.ignore"
+POSTTEMPLATE = "template.md.ignore"
+FOOTTEMPLATE = "footer.md.ignore"
 
 PFLAGS = -v -s "style.css" -S $(FOOTTEMPLATE) -t "freebuttpics.xyz"
 
