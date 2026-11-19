@@ -11,6 +11,6 @@ all of my projects (including this website) are free to use and licensed under t
 
 ---
 
-- [pagen](https://codeberg.org/rxsxyy/pagen): small markdown to html converter, can also be used to generate static html websites... like this one!!!!!!
+- [pagen](https://github.com/rxsxyy-rax/pagen): small markdown to html converter, can also be used to generate static html websites... like this one!!!!!!
 
 ---
