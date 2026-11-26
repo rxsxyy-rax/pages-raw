@@ -6,6 +6,14 @@
 
 # extra
 
-new extra content soon.....
+this page is for extra stuff that doesnt fit into [blog](/blog) OR [projects](projects)
+
+## gallery
+
+nothing here yet...
+
+## music
+
+nothing here yet...
 
 ---

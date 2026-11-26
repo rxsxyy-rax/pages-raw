@@ -6,14 +6,14 @@
 
 # current post
 
-nothing here yet...
+- [almost there (11/26)](/blog/2026-11-26-almost-there)
 
 ## blog archive
 
 ### 2026
 
-[BIG NEWS WTF?! (10/29)](/blog/2026-10-29-big-news-wtf)
-[life not for living (09/24)](/blog/2026-09-24-life-not-for-living)
-[first post! (09/21)](/blog/2026-09-21-first-post)
+- [BIG NEWS WTF?! (10/29)](/blog/2026-10-29-big-news-wtf)
+- [life not for living (09/24)](/blog/2026-09-24-life-not-for-living)
+- [first post! (09/21)](/blog/2026-09-21-first-post)
 
 ---
