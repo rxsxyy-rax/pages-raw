@@ -6,13 +6,14 @@ ASSETS = assets
 TITLE ?= untitled
 SLUG := $(shell printf '%s' '$(TITLE)' | tr 'A-Z ' 'a-z-' | tr -cd 'a-z0-9-')
 POST = blog/$(shell date +%Y-%m-%d)-$(SLUG).md
+EXTRA = extra/$(SLUG).md
 
 POSTTEMPLATE = "template.md.ignore"
 FOOTTEMPLATE = "footer.md.ignore"
 
 PFLAGS = -v -s "style.css" -S $(FOOTTEMPLATE) -t "freebuttpics"
 
-.PHONY: all clean deploy post
+.PHONY: all clean deploy post extra
 
 all: clean
 	mkdir -p $(OUT)
@@ -31,3 +32,8 @@ post:
 	@test ! -e $(POST) || { echo "$(POST) already exists"; exit 1; }
 	cp $(POSTTEMPLATE) $(POST)
 	@echo "created $(POST)"
+
+extra:
+	@test ! -e $(EXTRA) || { echo "$(EXTRA) already exists"; exit 1; }
+	cp $(POSTTEMPLATE) $(EXTRA)
+	@echo "created $(EXTRA)"
