@@ -1,20 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&display=swap");
+
 html {
-	background: #101010;
+	background: #efefec;
+	background-image: radial-gradient(#999999 1px, transparent 1px);
+	background-size: 16px 16px;
 }
 
 * {
-	font-family: 'Anthropic Serif Display', serif;
+	font-family: 'Recursive', sans-serif;
 	font-size: 12pt;
+	font-variation-settings:
+		"MONO" 0,
+		"CASL" 1,
+		"slnt" -5,
+		"CRSV" 0.5;
 }
 
 body {
-	margin: 2rem auto;
+	position: relative;
+	margin: 2rem 0 2rem 11rem;
 	padding: 0.5rem;
 	max-width: 35rem;
-	border: 1px solid white;
+	border: 2px solid #777;
+	border-radius: 6px;
 	line-height: 1.5rem;
-	background: black;
-	color: white;
+	background: #bcbcb9;
+	box-shadow: 10px 10px #999;
+	color: #343434;
 }
 
 h1, h2, h3 {
@@ -22,7 +34,7 @@ h1, h2, h3 {
 	padding-top: 0.4rem;
 	font-size: unset;
 	margin: auto;
-	border-bottom: 1px solid #aaa;
+	border-bottom: 2px dashed #777;
 }
 
 h1 {
@@ -41,7 +53,7 @@ h3 {
 hr {
 	margin-top: 4px;
 	border: 0;
-	border-bottom: 1px solid #aaa;
+	border-bottom: 2px dashed #777;
 	color: #aaa;
 }
 
@@ -51,15 +63,17 @@ p {
 
 p img {
 	display: flex;
+	margin: 1rem auto 0.5rem auto;
 	width: auto;
 	height: 250px;
-	border: 1px solid #aaa;
-	margin: 1rem auto 0.5rem auto;
+	border: 2px solid #777;
+	border-radius: 6px;
 }
 
 a {
-	color: white;
+	color: #343434;
 	text-decoration: none;
+	transition: color 0.1s, background-color 0.1s;
 }
 
 small {
@@ -71,11 +85,12 @@ footer {
 }
 
 a:hover {
-	background: white;
-	color: black;
+	background: #343434;
+	color: #bcbcb9;
 }
 
-/* Link icon */
+/* Link icon: the png is used as a mask and filled with the text
+   colour, so it always matches the link and fades with it */
 a::after {
 	content: "";
 	display: inline-block;
@@ -83,14 +98,10 @@ a::after {
 	height: 0.7em;
 	margin-left: 0.2em;
 	vertical-align: middle;
-	background-image: url("/assets/link.png");
-	background-size: contain;
-	background-repeat: no-repeat;
-	filter: brightness(0) invert(1);
-}
-
-a:hover::after {
-	filter: none;
+	background-color: currentColor;
+	-webkit-mask: url("/assets/link.png") no-repeat center / contain;
+	mask: url("/assets/link.png") no-repeat center / contain;
+	transition: background-color 0.2s;
 }
 
 /* Web buttons */
@@ -104,4 +115,53 @@ footer p img {
 
 ul, ol {
 	margin: 0
+}
+
+/* Navigation: the link line right after the page's first h1,
+   moved into its own box on the left side of the page */
+body > h1:first-child + p {
+	position: absolute;
+	top: -2px;
+	right: calc(100% + 2px + 1.5rem);
+	width: 7rem;
+	margin: 0;
+	padding: 0.5rem;
+	border: 2px solid #777;
+	border-radius: 6px;
+	background: #bcbcb9;
+	box-shadow: 10px 10px #999;
+}
+
+body > h1:first-child + p a {
+	display: block;
+	border-bottom: 2px dashed #777;
+}
+
+body > h1:first-child + p a:last-child {
+	border-bottom: 0;
+}
+
+/* The rule under the nav is no longer needed */
+body > h1:first-child + p + hr {
+	display: none;
+}
+
+/* Narrow screens: put the nav back inline above the content */
+@media (max-width: 40rem) {
+	body {
+		margin: 1rem;
+	}
+
+	body > h1:first-child + p {
+		position: static;
+		width: auto;
+		margin: 0.5rem 0;
+		box-shadow: none;
+	}
+
+	body > h1:first-child + p a {
+		display: inline-block;
+		border-bottom: 0;
+		margin-right: 0.5rem;
+	}
 }

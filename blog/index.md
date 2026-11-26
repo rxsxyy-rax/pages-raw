@@ -1,6 +1,6 @@
 # freebuttpics.xyz
 
-[home](/) [blog](/blog/) [proj](/proj) [extr](/extr)
+[home](/) [blog](/blog/) [projects](/projects) [extra](/extra)
 
 ---
 
