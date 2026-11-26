@@ -18,7 +18,7 @@ html {
 
 body {
 	position: relative;
-	margin: 2rem 0 2rem 11rem;
+	margin: 2rem 0 2rem 12rem;
 	padding: 0.5rem;
 	max-width: 35rem;
 	border: 2px solid #777;
@@ -117,13 +117,30 @@ ul, ol {
 	margin: 0
 }
 
-/* Navigation: the link line right after the page's first h1,
-   moved into its own box on the left side of the page */
-body > h1:first-child + p {
+/* Site title: the page's first h1, moved into its own box
+   on the left side of the page, above the nav */
+body > h1:first-child {
 	position: absolute;
 	top: -2px;
 	right: calc(100% + 2px + 1.5rem);
-	width: 7rem;
+	width: 8rem;
+	margin: 0;
+	padding: 0.5rem;
+	border: 2px solid #777;
+	border-radius: 6px;
+	background: #bcbcb9;
+	box-shadow: 10px 10px #999;
+	line-height: 1.5rem;
+}
+
+/* Navigation: the link line right after the page's first h1,
+   moved into its own box below the title box */
+body > h1:first-child + p {
+	position: absolute;
+	/* title box height (1.5rem line + 1rem padding + 4px border) + 1rem gap */
+	top: calc(-2px + 3.5rem + 4px);
+	right: calc(100% + 2px + 1.5rem);
+	width: 8rem;
 	margin: 0;
 	padding: 0.5rem;
 	border: 2px solid #777;
@@ -150,6 +167,13 @@ body > h1:first-child + p + hr {
 @media (max-width: 40rem) {
 	body {
 		margin: 1rem;
+	}
+
+	body > h1:first-child {
+		position: static;
+		width: auto;
+		margin: 0 0 0.5rem 0;
+		box-shadow: none;
 	}
 
 	body > h1:first-child + p {

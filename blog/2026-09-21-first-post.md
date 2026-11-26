@@ -1,4 +1,4 @@
-# freebuttpics.xyz
+# freebuttpics
 
 [home](/) [blog](/blog/) [projects](/projects) [socials](/socials) [extra](/extra/)
 
@@ -6,7 +6,7 @@
 
 # first post! (21/09)
 
-hello everyone! this is the first post of the freebuttpics.xyz, in the future there will be more additions to this, but first i thought of making a little update.
+hello everyone! this is the first post of the freebuttpics, in the future there will be more additions to this, but first i thought of making a little update.
 
 ## thoughts
 

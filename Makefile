@@ -10,7 +10,7 @@ POST = blog/$(shell date +%Y-%m-%d)-$(SLUG).md
 POSTTEMPLATE = "template.md.ignore"
 FOOTTEMPLATE = "footer.md.ignore"
 
-PFLAGS = -v -s "style.css" -S $(FOOTTEMPLATE) -t "freebuttpics.xyz"
+PFLAGS = -v -s "style.css" -S $(FOOTTEMPLATE) -t "freebuttpics"
 
 .PHONY: all clean deploy post
 
